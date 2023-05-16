@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --color--sidebar: rgb(53, 53, 53);
+  --color--todosbg: rgb(194, 194, 194);
+  --color--title: rgb(45, 45, 45);
+  --color--body: rgb(255, 255, 255);
+
+  --color--sidebar--title: rgb(255, 255, 255);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--color--body);
+  font-weight: 400;
+  line-height: 1.6;
+  height: 100vh;
+  overscroll-behavior-y: none;
+  background-color: #fff;
+  padding: 2.5rem;
+  display: flex;
+}
+
+.sidebar {
+  padding: 4rem 2rem 5rem 2rem;
+  flex-basis: 50rem;
+  background-color: var(--color--sidebar);
+  display: flex;
+  flex: 0.5;
+  flex-direction: column;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border: 0.05rem solid black;
+}
+.sidebar--content {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar--buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar--title {
+  border: 0.2rem solid var(--color--sidebar--title);
+  padding: 1.5rem 3rem 1.5rem 3rem;
+  font-size: 7rem;
+  margin-bottom: 3rem;
+  color: var(--color--sidebar--title);
+  align-self: center;
+}
+.todo--label {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.todo--text {
+  font-size: 3rem;
+  outline: none;
+  padding: 1rem 1rem 1rem 4rem;
+  border: none;
+  margin-bottom: 5rem;
+  transition: 0.2s ease-in;
+  color: black;
+}
+
+.todo--text:focus {
+  color: #fff;
+  border: 0.1rem solid rgb(255, 255, 255);
+  background-color: transparent;
+  transition: 0.2s ease-in;
+}
+
+.add--button:hover {
+  background-color: green;
+  color: black;
+}
+
+.delete--button:hover {
+  transition: 0.3s ease-in;
+  background-color: red;
+  color: black;
+}
+
+.todo--buttons {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  position: relative;
+  color: white;
+  font-size: 2.5rem;
+  padding: 1rem;
+  max-width: 25rem;
+  width: 18rem;
+  align-self: center;
+  border: 0.1rem solid black;
+  cursor: pointer;
+  border: 0.1rem solid red;
+  background-color: transparent;
+  transition: 0.2s ease-in;
+}
+.add--button {
+  border: 0.1rem solid green;
+  margin-left: 2rem;
+}
+
+.delete--button {
+  margin-right: 2rem;
+}
+
+.hidden--buttons {
+  transition: 0.3s ease-in;
+  display: none;
+}
+.content--todos {
+  border: 0.05rem solid black;
+  border-left: none;
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color--todosbg);
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.todos--list {
+  list-style: none;
+  margin: 2rem 0 2rem 5rem;
+}
+
+.todo--item {
+  border-left: 5px solid rgb(0, 255, 17);
+  display: flex;
+  flex-direction: column;
+  width: 60rem;
+  min-width: 25rem;
+  padding: 2rem 2rem 2rem 2rem;
+  background-color: rgb(255, 255, 255);
+  border-top-right-radius: 1.2rem;
+  border-bottom-right-radius: 1.2rem;
+  margin-bottom: 1.7rem;
+}
+
+.todo--title {
+  font-size: 2rem;
+  color: black;
+}
+
+.todo--info {
+  display: flex;
+  justify-content: space-between;
+}
+
+#deletecheck {
+  appearance: none;
+  height: 30px;
+  width: 30px;
+  border: 2px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#deletecheck:hover {
+  border-color: #666;
+}
+
+#deletecheck:checked {
+  border-color: red;
+  background-color: red;
+}
+
+#deletecheck:checked::before {
+  content: "X";
+  display: inline-block;
+  font-size: 2.5rem;
+  color: white;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-radius: 3px;
+}
+
+#deletecheck:focus {
+  box-shadow: 0 0 2px 2px rgba(0, 102, 204, 0.5);
+}
+
+.todo--details {
+  display: flex;
+  font-size: 1.4rem;
+  font-weight: bold;
+  justify-content: space-between;
+}
+
+.todo--details .todo--date {
+  color: #aeaeae;
+  font-weight: bold;
+}
+
+.todo--details .todo--todate {
+  color: #494949;
+  font-weight: bold;
+}

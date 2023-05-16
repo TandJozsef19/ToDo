@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo - App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="sidebar">
+      <h1 class="sidebar--title">To-Do App</h1>
+
+      <form class="form">
+        <div class="sidebar--content">
+          <label class="todo--label" for="todo--text">Add new task:</label>
+          <input
+            class="todo--text"
+            type="text"
+            placeholder="✍️ Write something"
+          />
+          <div class="sidebar--buttons">
+            <button class="add--button todo--buttons">Add✅</button>
+            <button class="delete--button todo--buttons">Delete All➖</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="content--todos">
+      <ul class="todos--list"></ul>
+    </div>
+  </body>
+</html>
